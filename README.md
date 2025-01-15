@@ -10,6 +10,21 @@
 This tool helps to check if a website is vulnerable to **clickjacking attacks**. It generates an HTML page embedding the target URL in an iframe. If the website loads successfully, it may be vulnerable.
 
 ---
+## What is Clickjacking?
+Clickjacking is a type of web attack where an attacker tricks users into clicking something different from what they perceive, potentially leading to unwanted actions. A vulnerable website can be framed (embedded in an invisible iframe) on a malicious site, causing the user to unknowingly interact with the embedded site. This can lead to unintended actions, like changing settings or sharing sensitive information without their knowledge.
+
+Clickjacking often takes advantage of websites that don’t have proper protections like X-Frame-Options headers, which prevent embedding in iframes.
+
+Example:
+When a website is vulnerable, it can be loaded into an invisible frame on another website, allowing an attacker to perform actions on behalf of the victim.
+
+---
+
+##How to Protect Against Clickjacking:
+Use X-Frame-Options HTTP headers with values like DENY or SAMEORIGIN to prevent iframe embedding.
+Implement a Content Security Policy (CSP) with the frame-ancestors directive to control which domains can embed your website.
+
+---
 
 ## 🚀 Features
 - Easy-to-use Bash script for Linux systems.
@@ -30,7 +45,43 @@ Ensure the following browsers are installed:
 ---
 
 ## 📦 Installation
-1. Clone this repository:
+1. #Clone this repository:
    ```bash
-   git clone https://github.com/your-username/clickjacking-tool.git
+   git clone https://github.com/karthikcherusala/clickjacking-tool.git
    cd clickjacking-tool
+
+2. #Set executable permissions for the script
+chmod 755 clickjacking-tester.sh
+
+3.#Copy the script to your desired directory
+cp ./clickjacking-tester.sh /home/user/Downloads/
+
+4. # Exit from the current directory
+exit
+
+5.# Navigate to the Downloads directory
+cd Downloads
+
+6. Run the script:
+./clickjacking_tool.sh
+
+
+Enter the target URL when prompted.
+
+Choose the browser to test the site:
+
+1: Google Chrome
+2: Firefox
+3: Brave
+The tool opens a test page in the selected browser to check for clickjacking.
+
+
+🔒 How It Works
+The tool generates a temporary HTML file (tmp.html) that embeds the target URL inside an iframe. If the iframe loads successfully, it indicates potential vulnerability. The temporary file is deleted after the test.
+
+## ⚠️ Warning
+This tool only works without root privileges. Running it with root may cause issues with browser execution.
+
+📝 Author
+Karthik
+A passionate cybersecurity enthusiast
