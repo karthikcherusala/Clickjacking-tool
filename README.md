@@ -48,51 +48,50 @@ Ensure the following browsers are installed:
 ## 📦 Installation
 To install and run the tool, follow the steps below:
 
-# Clone the repository
-git clone https://github.com/karthikcherusala/clickjacking-tool.git
+ Clone the repository
+# git clone https://github.com/karthikcherusala/clickjacking-tool.git
 
-# Navigate to the directory
-cd clickjacking-tester
+Navigate to the directory
+# cd clickjacking-tester
 
-# Set executable permissions for the script
-chmod 755 clickjacking-tester.sh
+Set executable permissions for the script
+# chmod 755 clickjacking-tester.sh
 
-# Copy the script to your desired directory
-cp ./clickjacking-tester.sh /home/user/Downloads/
+Copy the script to your desired directory
+# cp ./clickjacking-tester.sh /home/user/Downloads/
 
-# Exit from the current directory
-exit
+Exit from the current directory
+# exit
 
-# Navigate to the Downloads directory
-cd Downloads
+Navigate to the Downloads directory
+# cd Downloads
 
-# Run the script
-./clickjacking-tester.sh
+Run the script
+# ./clickjacking-tester.sh
 
 
 ## ⚠️ Warning
 This tool only works without root privileges. Running it with root may cause issues with browser execution.
 
 🛠️ Usage
-1.Run the script:
+# 1.Run the script:
 ./clickjacking_tool.sh
 
-2.Enter the target URL when prompted.
+# 2.Enter the target URL when prompted.
 
-3.Choose the browser to test the site:
+# 3.Choose the browser to test the site:
 
 1: Google Chrome
 2: Firefox
 3: Brave
 The tool opens a test page in the selected browser to check for clickjacking.
 
-📝 Author
+# 📝 Author
 Karthik
-
 Feel free to connect with me on LinkedIn or contribute to this project!
 
-🤝 Contributing
+# 🤝 Contributing
 Contributions are welcome! Fork this repository, make your changes, and submit a pull request.
 
-🎯 Disclaimer
+# 🎯 Disclaimer
 This tool is for educational purposes only. Testing on websites without proper authorization is illegal and against ethical hacking practices. Always obtain permission before conducting security tests.
